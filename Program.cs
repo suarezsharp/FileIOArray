@@ -15,7 +15,7 @@ namespace FileIOArray
             string[] students;
 
             
-            students = new string[] { "Agnis, Friend1, kinda lame", "Agatha, Friend2, is actually like 80", "Jamaine, Friend3, absolutely wild", "Jane, Friends have names, like"};
+            students = new string[] { "Agnis, Brown, 21", "Agatha, Smith, 23", "Jamaine, Campbell, 20", "Joe, Mama, 25"};
             WriteStudents(dataPath, students);
             students = ReadStudents(dataPath);
             DisplayStudents(students);
@@ -39,6 +39,7 @@ namespace FileIOArray
             Console.WriteLine("All students:");
             Console.WriteLine();
             Console.WriteLine("First Name".PadRight(15) + "Last Name".PadRight(15) + "Description".PadRight(15));
+            Console.WriteLine("----------".PadRight(15) + "---------".PadRight(15) + "-----------".PadRight(15));
             foreach (string student in students)
             {
                 string[] studentInfo = student.Split(',');
